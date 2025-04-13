@@ -306,13 +306,14 @@ function active_quiz()
 		}
 	
 		// Deactivate and pause everything
-		instance_deactivate_all(true);
+		//instance_deactivate_all(true);
 			
 		// Create the question sequence and save the sequence element id
 		question_sequence = layer_sequence_create("Sequences", 0, 0, seq_popup_question);
 			
 		// Set quiz active to true
 		global.quiz_active = true;
+		global.menu_lock = true;
 	
 	}
 	// The quiz is active
@@ -333,7 +334,7 @@ function active_quiz()
 			
 		// Set paused to false
 		global.quiz_active = false;
-	
+		global.menu_lock = false;
 	}
 }
 
