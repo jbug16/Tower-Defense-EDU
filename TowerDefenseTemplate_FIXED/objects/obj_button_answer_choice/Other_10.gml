@@ -34,6 +34,7 @@ if (answer_index == global.current_question_data.answer)
 } 
 else
 {
+	sprite_index = spr_button_red;
 	audio_play_sound(snd_button_no_click, 0, false);
 }
 
