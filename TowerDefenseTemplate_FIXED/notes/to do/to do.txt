@@ -1,7 +1,7 @@
 - remove coin UI, HUD?											DONE
 - remove coin UI under all the buttons (buy, sell, upgrade)		DONE
 - change it to ask question to upgrade							DONE
-- make tower disappear for selling								[]
+- make tower disappear for selling								DONE
 - fix objects from coming through UI							[]
 - what to do about the fraction of a second you can click UI?	[]
 - fix game pause AHHHHHH (if possible)							[]

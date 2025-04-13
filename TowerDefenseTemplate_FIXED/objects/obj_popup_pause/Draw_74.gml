@@ -9,7 +9,7 @@
 if (sprite_exists(global.screen_shot_id))
 {
 	// Id one does, draw it
-	draw_sprite(global.screen_shot_id, 0, 0, 0);
+	//draw_sprite(global.screen_shot_id, 0, 0, 0);
 }
 
 // Draw the Sprite
