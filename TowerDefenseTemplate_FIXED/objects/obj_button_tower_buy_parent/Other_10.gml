@@ -2,7 +2,7 @@
 
 
 // Check if it is currently in the unconfirmed state and if the player can afford it
-if (!confirmed) && (get_money() >= cost) 
+if (!confirmed) 
 {
 	// If it is, then
 	// Check whether the manager is in the confirmed state
@@ -13,32 +13,32 @@ if (!confirmed) && (get_money() >= cost)
 	}	
 	
 	// Confirm this choice
-	confirm_choice();	
+	confirm_choice();
 	
 	// Create an instance of obj_tower_range to show the player what the range will be
 	instance_create_layer(my_manager.x, my_manager.y - 39, "TowerRange", obj_tower_range);
 	
 }
-// If it is confirmed and the manager is confirmed and the player still has the money
-else if (my_manager.confirmed) && (confirmed) && (get_money() >= cost) 
+// If it is confirmed and the manager is confirmed
+else if (my_manager.confirmed) && (confirmed) 
 {
-	// Reduce the player's money by the cost of the tower's cost
-	adjust_money(-cost);
-	
-	// Create an instance of the tower
-	instance_create_depth(my_manager.x, my_manager.y, depth, my_tower);
-	
-	// Destroy the current tower base
-	instance_destroy(my_manager.my_tower);
-	
-	// Use the custom method to close the menu	
-	close_menu();
-	
-}
-// Otherwise, if the image_index is 1 then the player can't afford this tower
-else if (image_index == 1)
-{
-	// Play the no click sound
-	audio_play_sound(snd_button_no_click, 5, false);
-}
+	if (!global.quiz_active) 
+	{
+        //global.quiz_active = true;
 
+        // Store the tower type and position for later placement
+        global.pending_tower_type = my_tower;
+        global.target_x = my_manager.x;
+        global.target_y = my_manager.y;
+
+        // Also store the base (so we can destroy it after placing the tower)
+        global.pending_tower_base = my_manager.my_tower;
+
+        // Spawn the quiz UI
+        instance_create_layer(0, 0, "Instances", obj_quiz_manager);
+
+        // Close the build menu visually
+        close_menu();
+    }
+	
+}

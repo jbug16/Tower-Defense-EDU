@@ -1,6 +1,5 @@
 
-// If game is paused or in quiz, don't fire
-if (global.paused || global.quiz_active) exit;
+
 
 // Set depth based on its y value
 depth = -y;

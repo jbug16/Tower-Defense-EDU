@@ -265,6 +265,7 @@ function pause_or_unpause_game()
 			
 			// Set paused to true
 			paused = true;
+			global.paused = true;
 	
 		}
 		// The game is paused
@@ -285,8 +286,54 @@ function pause_or_unpause_game()
 			
 			// Set paused to false
 			paused = false;
+			global.paused = false;
 	
 		}
+	}
+}
+
+/// @description Spawns the quiz UI if the player has tried to purchase a tower
+function active_quiz()
+{
+	// If the quiz is not active, we want to activate it
+	if (!global.quiz_active)
+	{
+		// Check to see if a background screenshot already exists
+		if(!sprite_exists(global.screen_shot_id)) 
+		{
+			// If not, create one from the application_surface
+		    global.screen_shot_id = sprite_create_from_surface(application_surface, 0, 0, 1920, 1080, false, false, 0, 0);
+		}
+	
+		// Deactivate and pause everything
+		instance_deactivate_all(true);
+			
+		// Create the question sequence and save the sequence element id
+		question_sequence = layer_sequence_create("Sequences", 0, 0, seq_popup_question);
+			
+		// Set quiz active to true
+		global.quiz_active = true;
+	
+	}
+	// The quiz is active
+	else
+	{
+		// Check if the background sprite exists
+		if(sprite_exists(global.screen_shot_id))
+		{
+			// If it does, delete it
+		    sprite_delete(global.screen_shot_id);
+		}
+	
+		// Reactivate all instances
+		instance_activate_all();
+			
+		// Destroy the pause sequence using the sequence element id we saved earlier
+		layer_sequence_destroy(question_sequence);
+			
+		// Set paused to false
+		global.quiz_active = false;
+	
 	}
 }
 

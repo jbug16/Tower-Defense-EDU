@@ -23,6 +23,7 @@ village_flash_color = c_red;
 
 // This variable tells whether the game is currently paused.
 paused = false;
+global.paused = false;
 
 // This variable stores the id of the pause sequence if one exists, otherwise it stores negative 1.
 pause_sequence = -1;
@@ -40,3 +41,6 @@ global.screen_shot_id = -1;
 
 // This variable tells whether the game is currently over.
 game_over = false;
+
+// This vairable tells us whether the quiz is active or not
+global.quiz_active = false;
