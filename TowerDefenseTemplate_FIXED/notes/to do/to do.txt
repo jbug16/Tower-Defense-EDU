@@ -1,0 +1,4 @@
+- remove coin UI, HUD?
+- remove coin UI under all the buttons (buy, sell, upgrade)
+- change it to ask question to upgrade
+- what to do about sell?
