@@ -24,8 +24,9 @@ else if (my_manager.confirmed) && (confirmed)
 {
 	if (!global.quiz_active) 
 	{
-        //global.quiz_active = true;
-
+		// Store what kind of transaction this is
+		global.transaction = "buy";
+		
         // Store the tower type and position for later placement
         global.pending_tower_type = my_tower;
         global.target_x = my_manager.x;

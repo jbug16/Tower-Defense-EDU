@@ -1,8 +1,8 @@
 /// @description Upgrade Event
 
-/*
-// Check if it is currently in the unconfirmed state and if the player can afford it
-if (!confirmed) && (get_money() >= cost)
+
+// Check if it is currently in the unconfirmed state
+if (!confirmed)
 {
 	// If it is, then
 	// Check whether the manager is in the confirmed state
@@ -30,38 +30,21 @@ if (!confirmed) && (get_money() >= cost)
 	}
 
 }
-// If it is confirmed and the manager is confirmed and the player still has the money
-else if (my_manager.confirmed) && (confirmed) && (get_money() >= cost) 
+// If it is confirmed and the manager is confirmed
+else if (my_manager.confirmed) && (confirmed)
 {
-	// Reduce the player's money by the cost of the upgrade
-	adjust_money(-cost);
-	
-	// Use with to access the tower that spawned this button
-	with (my_manager.my_tower) 
+	if (!global.quiz_active)
 	{
-		// Use the built in function event_perform to perform user event 1, 
-		// which is the tower's level up event
-		event_perform(ev_other, ev_user1);
+		// Store what kind of transaction this is
+		global.transaction = "upgrade";
+		
+		// Store the base (so we can destroy it after placing the tower)
+        global.pending_tower_base = my_manager.my_tower;
+		
+		// Spawn the quiz UI
+        instance_create_layer(0, 0, "Instances", obj_quiz_manager);
+
+		// Use the custom method to close the menu
+		close_menu();
 	}
-
-	// Use the custom method to close the menu
-	close_menu();
-
 }
-// Otherwise, if the image_index is 1 then the player can't afford this upgrade
-else if (image_index == 1)
-{
-	// Play the no click sound
-	audio_play_sound(snd_button_no_click, 5, false);
-}
-
-
-
-
-
-
-
-
-
-
-
