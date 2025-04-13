@@ -4,7 +4,8 @@
 event_inherited();
 
 // This variable is the cost of buying an archer tower
-cost = 15;
+text = "Archer";
+x_offset = 33;
 
 // This variable holds which type of tower to create
 my_tower = obj_tower_archer;

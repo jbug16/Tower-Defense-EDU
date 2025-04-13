@@ -1,8 +1,9 @@
 /// @description Menu Button Parent
 
 
-// This variable stores the cost of the item. It will be overwritten in the child objects
-cost = 2;
+text = "[Example]";
+x_offset = 32;
+y_offset = 36;
 
 // This variable stores the color to draw the text in
 text_color = c_white;

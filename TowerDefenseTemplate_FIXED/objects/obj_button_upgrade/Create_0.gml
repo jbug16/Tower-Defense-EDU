@@ -4,7 +4,8 @@
 event_inherited();
 
 // Set the cost of this upgrade
-cost = my_manager.my_tower.cost;
+text = "Upgrade";
+x_offset = 39;
 
 // Use our custom function to animate this instance using a sequence
 animate_with_sequence("Sequences", x, y, seq_popup_button, obj_button_tower_buy_parent);

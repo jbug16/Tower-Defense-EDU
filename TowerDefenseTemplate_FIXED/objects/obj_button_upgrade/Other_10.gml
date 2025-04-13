@@ -1,6 +1,6 @@
 /// @description Upgrade Event
 
-
+/*
 // Check if it is currently in the unconfirmed state and if the player can afford it
 if (!confirmed) && (get_money() >= cost)
 {

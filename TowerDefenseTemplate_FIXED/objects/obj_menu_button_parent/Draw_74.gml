@@ -16,7 +16,7 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 
 // Draw the text
-draw_text_transformed(x - 18, y + 36, string(cost), image_xscale, image_yscale, 0);
+draw_text_transformed(x - x_offset, y + y_offset, text, image_xscale, image_yscale, 0);
 
 // Reset the font alignment and color
 draw_set_halign(fa_left);

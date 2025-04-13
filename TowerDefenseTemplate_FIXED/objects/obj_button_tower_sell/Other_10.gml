@@ -1,6 +1,6 @@
 /// @description Sell Event
 
-
+/*
 // Check if it is currently in the unconfirmed state
 if (!confirmed)
 {
