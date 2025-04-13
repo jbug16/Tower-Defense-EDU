@@ -309,12 +309,15 @@ function active_quiz()
 	// The quiz is active
 	else
 	{
+		// Delay variables
+		global._unlock_timer_start = get_timer();
+		global._unlock_timer_pending = true;
+		
 		// Destroy the pause sequence using the sequence element id we saved earlier
 		layer_sequence_destroy(question_sequence);
 			
 		// Set paused to false
 		global.quiz_active = false;
-		global.menu_lock = false;
 	}
 }
 

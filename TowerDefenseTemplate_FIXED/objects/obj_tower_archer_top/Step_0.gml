@@ -13,8 +13,6 @@ else
 	// Set the depth of this tower top relative to its y value + 150 
 	// (this decreases its depth so it will appear above the tower)
 	depth = -(y + 150);
-	show_debug_message("Tower DEPTH: " + string(depth));
-	if (instance_exists(obj_button_question)) show_debug_message("Quiz DEPTH: " + string(seq_popup_question.depth));
 	
 	// Update its image index based on its base's image index
 	// This will highlight the tower top if the base is highlighted

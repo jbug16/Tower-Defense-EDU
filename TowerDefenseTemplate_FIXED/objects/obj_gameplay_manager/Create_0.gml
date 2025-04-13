@@ -44,3 +44,5 @@ game_over = false;
 
 // This vairable tells us whether the quiz is active or not
 global.quiz_active = false;
+global._unlock_timer_pending = false;
+global._unlock_timer_start = 0;
