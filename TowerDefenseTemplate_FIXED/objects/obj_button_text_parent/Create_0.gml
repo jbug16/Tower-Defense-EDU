@@ -15,3 +15,5 @@ text_color = c_white;
 // This variable holds the color of the outline 
 text_outline_color = c_white;
 
+font = ft_button;
+valign = fa_middle;

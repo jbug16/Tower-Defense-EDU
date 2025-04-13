@@ -18,5 +18,6 @@ window_set_cursor(cr_none);
 // Give the cursor a sprite
 cursor_sprite = spr_cursor;
 
-
+// This variable tells you what level the student is selecting for the math questions
+global.selected_level = 1;
 

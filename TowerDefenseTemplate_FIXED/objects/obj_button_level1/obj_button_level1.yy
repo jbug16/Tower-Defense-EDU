@@ -1,20 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_button_start",
+  "%Name":"obj_button_level1",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_button_start",
+  "name":"obj_button_level1",
   "overriddenProperties":[],
   "parent":{
     "name":"Buttons",
     "path":"folders/Objects/Buttons.yy",
   },
   "parentObjectId":{
-    "name":"obj_button_text_parent",
-    "path":"objects/obj_button_text_parent/obj_button_text_parent.yy",
+    "name":"obj_button_play",
+    "path":"objects/obj_button_play/obj_button_play.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

@@ -1,5 +1,8 @@
 /// @description Start Button
 
+// Set question level
+global.selected_level = level;
+
 // Go to the level
 room_goto(rm_level_1);
 
