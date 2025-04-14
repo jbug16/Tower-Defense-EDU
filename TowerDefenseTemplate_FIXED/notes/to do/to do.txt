@@ -3,6 +3,6 @@
 - change it to ask question to upgrade							DONE
 - make tower disappear for selling								DONE
 - fix objects from coming through UI							DONE
-- what to do about the fraction of a second you can click UI?	[]
+- what to do about the fraction of a second you can click UI?	DONE
 - fix game pause AHHHHHH (if possible)							[]
 - sutdent picks level of questions								DONE
